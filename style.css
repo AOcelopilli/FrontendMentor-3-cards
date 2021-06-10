@@ -1,0 +1,58 @@
+/* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  /* Primary card color*/
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark: cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  /* paragrapgs */
+  --white-transparent: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --white-gray: hsl(0, 0%, 95%);
+}
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(15px + 0.5vw);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+.card{
+  align-items: flex-start;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: space-between;
+  padding: 1rem 10%;
+  width: 100%;
+}
+
+.card p{
+  line-height: 1.5rem;
+  width: 90%;
+}
+
+.card button{
+  height: 15vw;
+  width: 40vw;
+  border-radius: 3rem;
+  margin-bottom: 1rem;
+}
