@@ -27,7 +27,7 @@
 }
 
 html {
-  font-size: calc(15px + 0.5vw);
+  font-size: calc(15px + 1vh);
   font-family: "Lexend Deca", sans-serif;
 }
 
@@ -69,6 +69,7 @@ body {
   margin-top: 2rem;
   margin-bottom: 1rem;
   outline: none;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:first-child {
@@ -96,8 +97,22 @@ body {
   color: var(--very-dark-cyan);
 }
 
+/* Actions */
+.card button:hover {
+  background-color: transparent;
+  border: thin solid var(--white-transparent);
+  color: var(--white-transparent);
+}
+
+.card button:active {
+  background-color: var(--white-gray);
+  box-shadow: inset 0px 0px 10px rgba(97, 96, 96, 0.829);
+  border: thin rgba(182, 182, 182, 0.534) solid;
+  color: #222;
+}
+
 /* Memdia queries */
-@media (min-width: 675px) {
+@media (min-width: 800px) {
   body {
     display: flex;
     justify-content: center;
@@ -105,13 +120,13 @@ body {
   }
 
   main {
-    display: flex;
+    display: table;
     align-items: center;
     min-height: 75vh;
   }
 
   .card {
-    justify-content: flex-start;
+    display: table-cell;
     position: relative;
     width: 25vw;
     min-height: 70vh;
@@ -126,6 +141,11 @@ body {
   .card:last-of-type {
     background-color: var(--very-dark-cyan);
     border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .card p {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 
   .card button {
